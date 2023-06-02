@@ -36,7 +36,7 @@ def main():
     df = pd.DataFrame(indications_dict)
     sns.set(rc = {'figure.figsize':(10,10)})
     sns.heatmap(df.corr(), annot=True, cbar=True, cmap="RdYlGn")
-    plt.savefig('correlation_heatmap.png', bbox_inches='tight')
+    plt.savefig('correlation_heatmap.pdf', bbox_inches='tight')
 
 
 if __name__ == '__main__':
