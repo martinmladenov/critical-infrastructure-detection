@@ -23,7 +23,7 @@ def as_indication(host):
     
 def mobile_network(host):
     reverse_dns = host['reverse_dns']
-    if reverse_dns and 'mobile' in reverse_dns:
+    if reverse_dns and any(reverse_dns.endswith(f'.{domain}') for domain in mobile_domains):
         return 'mobile_network'
     
 def no_plcscan_results(host):

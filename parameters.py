@@ -27,3 +27,8 @@ honeypot_defaults = {
         'Serial number of memory card': 'MMC 267FF11F',
     },
 }
+mobile_domains = [
+    'mobile.kpn.net',
+    'telenormobil.no',
+    'netcom.no',
+]
