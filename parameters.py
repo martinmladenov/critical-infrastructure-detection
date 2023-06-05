@@ -9,12 +9,12 @@ as_indications = {
     'DIGITALOCEAN-ASN': 'datacenter_as',
     'REDHOSTING-AS': 'datacenter_as',
     'AS-CHOOPA': 'datacenter_as',
+    'MVPS www.mvps.net': 'datacenter_as',
+    'GOOGLE-CLOUD-PLATFORM': 'datacenter_as',
+    'MICROSOFT-CORP-MSN-AS-BLOCK': 'datacenter_as',
+    'SURFNET-NL SURFnet, The Netherlands': 'university_as',
     'IP-EEND-AS IP-EEND BV': 'university_as', # SURFnet
-    # potential industrial ASes:
-    # CRITICALCORE
-    # ASN-ROUTIT
-    # EQUEST-AS
-    # NEXTPERTISE Nextpertise - deanone.nl
+    'UNINETT UNINETT, The Norwegian University & Research Network': 'university_as',
 }
 honeypot_defaults = {
     'conpot': { # https://github.com/mushorg/conpot/blob/f0e6925fb9632172922abe41b293d7ee438fa60b/conpot/templates/default/template.xml
@@ -29,6 +29,7 @@ honeypot_defaults = {
 }
 mobile_domains = [
     'mobile.kpn.net',
+    'kpn-gprs.nl',
     'telenormobil.no',
     'netcom.no',
 ]
