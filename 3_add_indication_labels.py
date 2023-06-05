@@ -11,11 +11,6 @@ def many_open_ports(host):
     if open_port_count > honeypot_open_port_threshold:
         return 'many_open_ports'
 
-def no_s7_censys_label(host):
-    s7_censys_service = host['s7_censys_service']
-    if not s7_censys_service:
-        return 'no_s7_censys_label'
-
 def as_indication(host):
     as_name = host['as_name']
     if as_name in as_indications:
@@ -49,7 +44,6 @@ def vipa_indication(host):
 
 indication_functions = [
     many_open_ports,
-    no_s7_censys_label,
     as_indication,
     mobile_network,
     no_plcscan_results,
