@@ -35,7 +35,9 @@ def main():
     
     df = pd.DataFrame(indications_dict)
     sns.set(rc = {'figure.figsize':(10,10)})
-    sns.heatmap(df.corr(), annot=True, cbar=True, cmap="RdYlGn")
+    sns.set(font_scale=2.3)
+    sns.heatmap(df.corr(), annot=True, cmap="RdBu", vmin=-1, vmax=1, fmt='.1f', cbar=False)
+    plt.xticks(rotation=45, ha='right')
     plt.savefig('correlation_heatmap.pdf', bbox_inches='tight')
 
 
