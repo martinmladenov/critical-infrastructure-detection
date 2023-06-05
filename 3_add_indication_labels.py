@@ -27,12 +27,11 @@ def mobile_network(host):
         return 'mobile_network'
     
 def no_plcscan_results(host):
-    matches = host['s7_data']
-    if not matches:
+    if 's7_data' in host and not host['s7_data']:
         return 'no_plcscan_results'
 
 def honeypot_default(host):
-    if not host['s7_data']:
+    if not host.get('s7_data', None):
         return
     s7_data = {e['key']: e['value'] for e in host['s7_data']}
     for honeypot_name, defaults in honeypot_defaults.items():
@@ -41,7 +40,7 @@ def honeypot_default(host):
                 return f'honeypot_defaults_{honeypot_name}'
 
 def vipa_indication(host):
-    if not host['s7_data']:
+    if not host.get('s7_data', None):
         return
     is_vipa = next((e for e in host['s7_data'] if e['key'] == 'Unknown (129)' and 'VIPA' in e['value']), None)
     if is_vipa:
