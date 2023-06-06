@@ -15,7 +15,7 @@ from parameters import *
 # honeypot_defaults_snap7
 # manufacturer_vipa'
 
-classification_unknown = 'classification_unknown'
+classification_unknown = 'classification_potentially_real'
 classification_likely_honeypot = 'classification_likely_honeypot'
 classification_honeypot = 'classification_honeypot'
 classification_likely_real = 'classification_likely_real'
