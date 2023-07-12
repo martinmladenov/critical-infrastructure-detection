@@ -2,7 +2,7 @@
 
 This is code related to my thesis "Detection of critical infrastructure devices on the public Internet".
 
-The full thesis can be found on the [TU Delft Repository](https://repository.tudelft.nl/).
+The full thesis can be found on the [TU Delft Repository](http://resolver.tudelft.nl/uuid:fd89efe5-56e2-4661-aeb1-48ac46a8c9ba).
 
 ## Steps
 
